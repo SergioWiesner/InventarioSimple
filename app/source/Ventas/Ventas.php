@@ -42,13 +42,12 @@ class Ventas
     public function agregarCarrito($id, $valor, $cantidad, $stock, $idventa)
     {
         $this->productos->descontarStock($id, $cantidad, $stock);
-
-        $this->carritoventa = new carrito();
-        $this->carritoventa->idproductos = $id;
-        $this->carritoventa->cantidad = $cantidad;
-        $this->carritoventa->subtotal = $valor * $cantidad;
-        $this->carritoventa->idventa = $idventa;
-        $this->carritoventa->save();
+        DB::table('carrito')->insert([
+            'idproductos' => $id,
+            'cantidad' => $cantidad,
+            'subtotal' => $valor * $cantidad,
+            'idventa' => $idventa
+        ]);
     }
 
     public function listarVenta()
