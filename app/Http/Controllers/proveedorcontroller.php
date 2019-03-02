@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\proveedorRequest;
-use App\source\Proveedor\proveedor;
+use App\source\Proveedor\Proveedor;
 use Illuminate\Http\Request;
 
 class proveedorcontroller extends Controller
@@ -12,7 +12,7 @@ class proveedorcontroller extends Controller
 
     public function __construct()
     {
-        $this->manager = new proveedor();
+        $this->manager = new Proveedor();
     }
 
     /**
