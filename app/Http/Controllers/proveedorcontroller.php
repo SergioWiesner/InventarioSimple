@@ -43,7 +43,8 @@ class proveedorcontroller extends Controller
      */
     public function store(proveedorRequest $request)
     {
-        return $this->manager->crearProveedor($request->all());
+        $this->manager->crearProveedor($request->all());
+        return redirect()->back();
     }
 
     /**
@@ -88,6 +89,7 @@ class proveedorcontroller extends Controller
      */
     public function destroy($id)
     {
-        return $this->manager->eliminarProveedor($id);
+        $this->manager->eliminarProveedor($id);
+        return redirect()->back();
     }
 }

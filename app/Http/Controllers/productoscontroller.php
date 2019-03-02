@@ -2,10 +2,21 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\productosRequest;
+use App\source\Productos\Productos;
 use Illuminate\Http\Request;
 
 class productoscontroller extends Controller
 {
+
+
+    private $productos;
+
+    public function __construct()
+    {
+        $this->productos = new Productos();
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -29,29 +40,30 @@ class productoscontroller extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(productosRequest $request)
     {
-        //
+        $this->productos->crearProductos($request->all());
+        return redirect()->back();
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
-        //
+        return $this->productos->bucarProductos($id);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -62,8 +74,8 @@ class productoscontroller extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \Illuminate\Http\Request $request
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -74,7 +86,7 @@ class productoscontroller extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)

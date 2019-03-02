@@ -2,7 +2,8 @@
 
 namespace App\source\Proveedor;
 
-use App\proveedor;
+use App\proveedor as database;
+use App\source\Tools\Basics;
 use Illuminate\Support\Facades\DB;
 
 class Proveedor
@@ -11,19 +12,19 @@ class Proveedor
 
     public function __construct()
     {
-        $this->proveedor = new proveedor();
+        $this->proveedor = new database();
     }
 
 
     public function crearProveedor($data)
     {
-        $this->productos->nombreproveedor = $data['nombre'];
+        $this->proveedor->nombreproveedor = $data['nombreproveedor'];
         return $this->proveedor->save();
     }
 
     public function listarProveedor()
     {
-        return proveedor::all();
+        return Basics::collectionToArray(database::all());
     }
 
     public function actualizarProveedor($data, $id)
@@ -35,6 +36,6 @@ class Proveedor
 
     public function eliminarProveedor($id)
     {
-        return proveedor::where('id', $id)->delete();
+        return database::where('id', $id)->delete();
     }
 }

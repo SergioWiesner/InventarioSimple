@@ -9,13 +9,13 @@ class productos extends Model
 {
     use SoftDeletes;
 
-    protected $table = "productos"
+    protected $table = "productos";
     protected $fillable = ['id', 'nombre', 'cantidad', 'fechavenciomiento', 'lote', 'precio', 'idproveedor', 'estado'];
 
 
-    public function ventas()
+    public function carrito()
     {
-        return $this->hasMany('App\ventas', 'idproductos', 'id');
+        return $this->hasMany('App\carrito', 'idproductos', 'id');
     }
 
     public function proveedor()

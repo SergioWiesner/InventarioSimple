@@ -9,11 +9,11 @@ class usuarios extends Model
 {
     use SoftDeletes;
 
-    protected $table = "usuarios"
+    protected $table = "usuarios";
     protected $fillable = ['id', 'nombre'];
 
     public function ventas()
     {
-        return $this->hasMany('App\ventas', 'idusuarios', 'id');
+        return $this->hasMany('App\ventas', 'idusuario', 'id');
     }
 }

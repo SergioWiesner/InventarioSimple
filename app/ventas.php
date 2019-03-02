@@ -3,21 +3,24 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class ventas extends Model
 {
     use SoftDeletes;
 
-    protected $table = "ventas"
-    protected $fillable = ['id', 'idproductos', 'idusuarios', 'cantidad'];
+    protected $table = "ventas";
+    protected $fillable = ['id', 'idusuario', 'total'];
 
     public function usuarios()
     {
-        return $this->belongsTo('App\usuarios', 'idusuarios', 'id');
+        return $this->belongsTo('App\usuarios', 'idusuario', 'id');
     }
 
-    public function productos()
+    public function carrito()
     {
-        return $this->belongsTo('App\productos', 'idproductos', 'id');
+        return $this->hasMany('App\carrito', 'idventa', 'id');
     }
+
+
 }

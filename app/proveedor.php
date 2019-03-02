@@ -9,7 +9,7 @@ class proveedor extends Model
 {
     use SoftDeletes;
 
-    protected $table = "proveedor"
+    protected $table = "proveedor";
     protected $fillable = ['id', 'nombreproveedor'];
 
     public function productos()

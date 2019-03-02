@@ -2,7 +2,8 @@
 
 namespace App\source\Usuarios;
 
-use App\usuarios;
+use App\source\Tools\Basics;
+use App\usuarios as database;
 use Illuminate\Support\Facades\DB;
 
 class Usuarios
@@ -11,7 +12,7 @@ class Usuarios
 
     public function __construct()
     {
-        $this->usuario = new usuarios();
+        $this->usuario = new database();
     }
 
     public function crearUsuarios($data)
@@ -22,7 +23,7 @@ class Usuarios
 
     public function listarUsuarios()
     {
-        return usuarios::all();
+        return Basics::collectionToArray(database::all());
     }
 
     public function actualizarUsuarios($data, $id)
@@ -34,6 +35,6 @@ class Usuarios
 
     public function eliminarUsuarios($id)
     {
-        return usuarios::where('id', $id)->delete();
+        return database::where('id', $id)->delete();
     }
 }

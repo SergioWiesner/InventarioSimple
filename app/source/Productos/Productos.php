@@ -2,8 +2,9 @@
 
 namespace App\source\Productos;
 
+use App\source\Tools\Basics;
 use Illuminate\Support\Facades\DB;
-use \App\productos;
+use App\productos as database;
 
 class Productos
 {
@@ -11,7 +12,7 @@ class Productos
 
     public function __construct()
     {
-        $this->productos = new productos();
+        $this->productos = new database();
     }
 
 
@@ -23,13 +24,18 @@ class Productos
         $this->productos->lote = $data['lote'];
         $this->productos->precio = $data['precio'];
         $this->productos->idproveedor = $data['idproveedor'];
-        $this->productos->estado = $data['estado'];
+        $this->productos->estado = true;
         return $this->productos->save();
     }
 
     public function listarProductos()
     {
-        return productos::all();
+        return Basics::collectionToArray(database::with('proveedor')->get());
+    }
+
+    public function bucarProductos($id)
+    {
+        return Basics::collectionToArray(database::where('id', $id)->with('proveedor')->get());
     }
 
     public function actualizarProductos($data, $id)
@@ -49,6 +55,30 @@ class Productos
 
     public function eliminarProductos($id)
     {
-        return productos::where('id', $id)->delete();
+        return database::where('id', $id)->delete();
+    }
+
+    public function descontarStock($id, $cantidad, $stock)
+    {
+        $estado = 1;
+        if ($stock - $cantidad <= 0) {
+            $estado = 0;
+        }
+        return DB::table('productos')
+            ->where('id', $id)
+            ->update([
+                'cantidad' => $stock - $cantidad,
+                'estado' => $estado
+            ]);
+    }
+
+    public function sumarAStock($id, $cantidad, $stock)
+    {
+        return DB::table('productos')
+            ->where('id', $id)
+            ->update([
+                'cantidad' => $stock + $cantidad,
+                'estado' => 1
+            ]);
     }
 }
