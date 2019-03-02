@@ -2,35 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06734b41-336e-48b4-8ecc-1f4135d1f984" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/app/source/Tools/Basics.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/cliente.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/factura.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/proveedores.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/ventas.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/appcontroller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/appcontroller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/productoscontroller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/productoscontroller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/proveedorcontroller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/proveedorcontroller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/usuarioscontroller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/usuarioscontroller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ventascontroller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ventascontroller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/proveedorRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/proveedorRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/productos.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/productos.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/proveedor.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/proveedor.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/source/Productos/Productos.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/source/Productos/Productos.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/source/Proveedor/Proveedor.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/source/Proveedor/Proveedor.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/source/Usuarios/Usuarios.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/source/Usuarios/Usuarios.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/source/Ventas/Ventas.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/source/Ventas/Ventas.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/usuarios.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/usuarios.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ventas.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/ventas.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_03_02_014301_create__table_ventas.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_03_02_014301_create__table_ventas.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/creacioncliente.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/producto.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/creacionproducto.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/listarventas.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/inicio.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inicio.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/root.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/root.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -53,11 +26,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ventascontroller.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ventascontroller.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ventascontroller.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="543">
               <caret line="89" column="23" selection-end-line="93" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Procfile" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Procfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
@@ -149,6 +131,7 @@
         <option value="$PROJECT_DIR$/resources/views/listarventas.blade.php" />
         <option value="$PROJECT_DIR$/app/source/Productos/Productos.php" />
         <option value="$PROJECT_DIR$/app/source/Ventas/Ventas.php" />
+        <option value="$PROJECT_DIR$/Procfile" />
       </list>
     </option>
   </component>
@@ -267,60 +250,6 @@
               <item name="InventarioSimple" type="b2602c69:ProjectViewProjectNode" />
               <item name="InventarioSimple" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="InventarioSimple" type="b2602c69:ProjectViewProjectNode" />
-              <item name="InventarioSimple" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="InventarioSimple" type="b2602c69:ProjectViewProjectNode" />
-              <item name="InventarioSimple" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="InventarioSimple" type="b2602c69:ProjectViewProjectNode" />
-              <item name="InventarioSimple" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="InventarioSimple" type="b2602c69:ProjectViewProjectNode" />
-              <item name="InventarioSimple" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="source" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="InventarioSimple" type="b2602c69:ProjectViewProjectNode" />
-              <item name="InventarioSimple" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="source" type="462c0819:PsiDirectoryNode" />
-              <item name="Productos" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="InventarioSimple" type="b2602c69:ProjectViewProjectNode" />
-              <item name="InventarioSimple" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="source" type="462c0819:PsiDirectoryNode" />
-              <item name="Ventas" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="InventarioSimple" type="b2602c69:ProjectViewProjectNode" />
-              <item name="InventarioSimple" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="InventarioSimple" type="b2602c69:ProjectViewProjectNode" />
-              <item name="InventarioSimple" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="InventarioSimple" type="b2602c69:ProjectViewProjectNode" />
-              <item name="InventarioSimple" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -334,6 +263,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RunDashboard">
@@ -359,12 +289,12 @@
       <option name="presentableId" value="Default" />
       <updated>1551489736224</updated>
       <workItem from="1551489737924" duration="6934000" />
-      <workItem from="1551498296077" duration="31625000" />
+      <workItem from="1551498296077" duration="32459000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38559000" />
+    <option name="totallyTimeSpent" value="39393000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -727,6 +657,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="543">
           <caret line="89" column="23" selection-end-line="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Procfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
