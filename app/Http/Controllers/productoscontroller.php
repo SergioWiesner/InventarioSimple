@@ -91,6 +91,7 @@ class productoscontroller extends Controller
      */
     public function destroy($id)
     {
-        //
+        $this->productos->eliminarProductos($id);
+        return redirect()->back();
     }
 }

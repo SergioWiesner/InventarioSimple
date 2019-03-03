@@ -59,6 +59,7 @@
                     <th scope="col">Proveedor</th>
                     <th scope="col">Precio</th>
                     <th scope="col">Fecha de vencimiento</th>
+                    <th scope="col">Invntario</th>
                     <th></th>
                 </tr>
                 </thead>
@@ -73,6 +74,8 @@
                             <td>${{number_format($productos[$a]['precio'])}}</td>
                             <td>{{date_format(date_create($productos[$a]['fechavenciomiento']), 'd-m-y')}}</td>
                             <td>@if($productos[$a]['estado'] == 1) Activo @else Desactivado @endif</td>
+                            <td><a href="{{route('eliminarproductos', ['id' => $productos[$a]['id']])}}"><i
+                                        class="fas fa-trash"></i> Eliminar</a></a></td>
                         </tr>
                     @endfor
                 @endif

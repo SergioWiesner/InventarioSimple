@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="{{asset('css/main.css')}}">
 </head>
 <body>
-<div class="container">
+<div class="container-fluid">
     <ul class="nav nav-pills">
         <li class="nav-item">
             <a class="nav-link" href="{{route('clientes')}}">Clientes</a>

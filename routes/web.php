@@ -26,5 +26,6 @@ Route::post('/venta/guardar', 'ventascontroller@store')->name('crearventa');
 Route::get('/clientes/eliminar/{id}', 'usuarioscontroller@destroy')->name('eliminarcliente');
 Route::get('/proveedor/eliminar/{id}', 'proveedorcontroller@destroy')->name('eliminarproveedor');
 Route::get('/eliminar/venta/{id}', 'ventascontroller@destroy')->name('eliminarventas');
+Route::get('/eliminar/productos/{id}', 'productoscontroller@destroy')->name('eliminarproductos');
 
 Route::get('/productos/bucar/{id}', 'productoscontroller@show');
