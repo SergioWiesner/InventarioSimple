@@ -59,7 +59,7 @@
                     <th scope="col">Proveedor</th>
                     <th scope="col">Precio</th>
                     <th scope="col">Fecha de vencimiento</th>
-                    <th scope="col">Invntario</th>
+                    <th scope="col">Inventario</th>
                     <th></th>
                 </tr>
                 </thead>

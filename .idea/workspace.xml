@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06734b41-336e-48b4-8ecc-1f4135d1f984" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/productoscontroller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/productoscontroller.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/producto.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/producto.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/root.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/root.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,7 +20,7 @@
         <entry file="file://$PROJECT_DIR$/resources/views/producto.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="237">
-              <caret line="61" column="35" selection-end-line="86" />
+              <caret line="61" column="40" selection-end-line="86" />
             </state>
           </provider>
         </entry>
@@ -332,12 +329,12 @@
       <updated>1551489736224</updated>
       <workItem from="1551489737924" duration="6934000" />
       <workItem from="1551498296077" duration="34948000" />
-      <workItem from="1551620990482" duration="5074000" />
+      <workItem from="1551620990482" duration="5345000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46956000" />
+    <option name="totallyTimeSpent" value="47227000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -717,7 +714,7 @@
     <entry file="file://$PROJECT_DIR$/resources/views/producto.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="237">
-          <caret line="61" column="35" selection-end-line="86" />
+          <caret line="61" column="40" selection-end-line="86" />
         </state>
       </provider>
     </entry>
