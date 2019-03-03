@@ -72,6 +72,7 @@
                             <td>{{$productos[$a]['proveedor']['nombreproveedor']}}</td>
                             <td>${{number_format($productos[$a]['precio'])}}</td>
                             <td>{{date_format(date_create($productos[$a]['fechavenciomiento']), 'd-m-y')}}</td>
+                            <td>@if($productos[$a]['estado'] == 1) Activo @else Desactivado @endif</td>
                         </tr>
                     @endfor
                 @endif

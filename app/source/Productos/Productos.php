@@ -35,7 +35,7 @@ class Productos
 
     public function bucarProductos($id)
     {
-        return Basics::collectionToArray(database::where('id', $id)->with('proveedor')->get());
+        return Basics::collectionToArray(database::where([['id', $id], ['estado', 1]])->with('proveedor')->get());
     }
 
     public function actualizarProductos($data, $id)

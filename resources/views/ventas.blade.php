@@ -18,7 +18,6 @@
                                         value="{{$productos[$a]['id']}}">{{$productos[$a]['nombre']}}</option>
                                 @endfor
                             @endif
-
                         </select>
                     </div>
                     <button onClick="agregarproducto()" class="btn btn-primary btn-block">Agregar</button>
@@ -69,18 +68,39 @@
 <script>
     let lista = []
     let pedido = [];
-
+    let producto = [];
     let calc = function calculo() {
+        let sumatoria = 0;
+        let position = 0;
+        let flag = false;
         let lugar = this.getAttribute('item');
         let precio = this.getAttribute('precio');
         let cantidadl = this.getAttribute('cantmax');
-        console.log(this.value + ' ' + cantidadl);
         if (parseInt(this.value) <= cantidadl) {
             let subtotal = precio * this.value;
-            document.getElementById('total' + lugar).innerText = '$' + subtotal;
+            document.getElementById('total' + lugar).innerText = '$' + new Intl.NumberFormat("COP-CO").format(subtotal);
+            if (pedido.length > 0) {
+                for (let b = 0; b < pedido.length; b++) {
+                    if (pedido[b]['id'] == lugar) {
+                        flag = true;
+                        position = b;
+                    }
+                }
+                if (flag == true) {
+                    pedido[position]['subtotal'] = subtotal
+                } else {
+                    pedido.push({'id': lugar, 'subtotal': subtotal});
+                }
+            } else {
+                pedido.push({'id': lugar, 'subtotal': subtotal});
+            }
         } else {
             document.getElementById('total' + lugar).innerText = 'Fuera de stock';
         }
+        for (let c = 0; c < pedido.length; c++) {
+            sumatoria += pedido[c]['subtotal'];
+        }
+        document.getElementById('valortotal').innerText = "$" + new Intl.NumberFormat("COP-CO").format(sumatoria);
     }
 
     function agregarproducto() {
@@ -94,14 +114,13 @@
                 }
             }
         }
-
         if (flag != true) {
             lista.push(id);
             fetch('/productos/bucar/' + id).then(res => res.json())
                 .catch(error => console.error('Error:', error))
                 .then(response => {
                     elChild = document.createElement('tr');
-                    elChild.innerHTML = '<th scope="row"> <input type="hidden" name="producto[id][]" value="' + response[0]['id'] + '"><input type="hidden" name="producto[nombre][]" value="' + response[0]['nombre'] + '"><input type="hidden" name="producto[stock][]" value="' + response[0]['cantidad'] + '"><input type="hidden" name="producto[valorunidad][]" value="' + response[0]['precio'] + '">' + response[0]['nombre'] + '</th><td><input type="text" name="producto[cantidad][]" id="id' + response[0]['id'] + '" item="' + response[0]['id'] + '"  precio="' + response[0]['precio'] + '" cantmax="' + response[0]['cantidad'] + '" placeholder="' + response[0]['cantidad'] + '" required></td><td>' + response[0]['proveedor']['nombreproveedor'] + '</td><td>$' + response[0]['precio'] + '</td><td><p id="total' + response[0]['id'] + '"></p></td>'
+                    elChild.innerHTML = '<th scope="row"> <input type="hidden" name="producto[id][]" value="' + response[0]['id'] + '"><input type="hidden" name="producto[nombre][]" value="' + response[0]['nombre'] + '"><input type="hidden" name="producto[stock][]" value="' + response[0]['cantidad'] + '"><input type="hidden" name="producto[valorunidad][]" value="' + response[0]['precio'] + '">' + response[0]['nombre'] + '</th><td><input type="text" name="producto[cantidad][]" id="id' + response[0]['id'] + '" item="' + response[0]['id'] + '"  precio="' + response[0]['precio'] + '" cantmax="' + response[0]['cantidad'] + '" placeholder="' + response[0]['cantidad'] + '" required></td><td>' + response[0]['proveedor']['nombreproveedor'] + '</td><td>$' + new Intl.NumberFormat("COP-CO").format(response[0]['precio']) + '</td><td><p id="total' + response[0]['id'] + '"></p></td>'
                     document.getElementById('cuerpoproductos').appendChild(elChild);
                     document.getElementById('id' + response[0]['id']).addEventListener('keyup', calc);
                 });
